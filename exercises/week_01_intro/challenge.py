@@ -29,6 +29,15 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 1 below:
 
+eur = float(input("how many euros do you have? "))
+ex_rate = float(input("Enter exchange rate (EUR to USD): "))
+gross_usd = eur * ex_rate
+fee = gross_usd * 0.02
+net_usd = gross_usd - fee
+print(f"Gross USD: ${gross_usd:.2f}")
+print(f"Fee: ${fee:.2f}")
+print(f"Net USD: ${net_usd:.2f}")
+
 
 # ------------------------------------------------------------------------------
 # Challenge 2: Pizza Party Slices & Leftovers
@@ -52,6 +61,18 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 2 below:
 
+ppl = int(input("enter no people "))
+wholes = int(input("enter number of pizzas "))
+slice_per_pizza = int(input("enter no slices per pizza "))
+
+total_slices = wholes*slice_per_pizza
+slices_per_student = total_slices // ppl
+leftover = total_slices % ppl
+
+print(f"Total slices: {total_slices}")
+print(f"Slices per student: {slices_per_student}")
+print(f"Leftover slices: {leftover}")
+
 
 # ------------------------------------------------------------------------------
 # Challenge 3: Sphere Geometry (Volume & Surface Area)
@@ -68,6 +89,16 @@ import math  # noqa: F401
 #    print(f"Sphere Surface Area: {surface_area:.2f}")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 3 below:
+
+import math
+
+rad = float(input("Enter sphere radius: "))
+sur_area = 4 * math.pi * (rad ** 2)
+vol = (4 / 3) * math.pi * (rad ** 3)
+
+print(f"Sphere Volume: {vol:.2f}")
+print(f"Sphere Surface Area: {sur_area:.2f}")
+
 
 
 # ------------------------------------------------------------------------------
@@ -87,6 +118,13 @@ import math  # noqa: F401
 #    print(cup_a, cup_b, cup_c, sep=" -> ")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 4 below:
+
+ina = input("Enter item in Cup A: ").strip()
+inb = input("Enter item in Cup B: ").strip()
+inc = input("Enter item in Cup C: ").strip()
+ina, inb, inc = inc, ina, inb
+print(ina, inb, inc, sep=" -> ")
+
 
 
 # ------------------------------------------------------------------------------
@@ -114,4 +152,14 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 5 below:
 
+name = input("Enter attendee name: ").strip().title()
+dep = input("Enter department: ").strip().upper()
+role = input("Enter role ").strip().title()
 
+border = "#" * 32
+print(border)
+print(f"NAME: {name}")
+print(f"DEPT: {dep}")
+print(f"ROLE: {role}")
+print(f"NAME LENGTH: {len(name)}")
+print(border)
